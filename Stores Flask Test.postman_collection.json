@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "919ae584-3bf1-4821-a1d1-69bb2648f128",
+		"name": "Stores Flask Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25561179"
+	},
+	"item": [
+		{
+			"name": "Items",
+			"item": [
+				{
+					"name": "Get All Items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a New Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store_id\": \"{{STORE_ID}}\",\r\n    \"name\": \"chair\",\r\n    \"price\": 10.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/items",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get an Item",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items/{{ITEM_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"{{ITEM_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update an Item",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test_item\",\r\n    \"price\": 69.69\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/items/{{ITEM_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"{{ITEM_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete an Item",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/items/{{ITEM_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"items",
+								"{{ITEM_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stores",
+			"item": [
+				{
+					"name": "Get All Stores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/stores",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"test1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/stores",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"stores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Specific Store",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/store/{{STORE_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"store",
+								"{{STORE_ID}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Store",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/store/{{STORE_ID}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"store",
+								"{{STORE_ID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
